@@ -12,7 +12,9 @@
       "Bash(./gh_2.96.0_macOS_arm64/bin/gh --version)",
       "Bash(./gh_2.96.0_macOS_arm64/bin/gh auth *)",
       "Bash(chmod +x push.sh)",
-      "Bash(./push.sh \"Thêm script auto push\")"
+      "Bash(./push.sh \"Thêm script auto push\")",
+      "WebFetch(domain:kientruckienphong.vn)",
+      "Bash(./push.sh \"Thêm trang chọn nhà thầu + hồ sơ Kiến Phong \\(crawl từ kientruckienphong.vn\\)\")"
     ]
   }
 }
