@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Bash(brew --version)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(/opt/homebrew/bin/brew --version)",
+      "Bash(curl -sI https://github.com/cli/cli/releases/latest)",
+      "Bash(curl -sL -o gh.zip \"https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_macOS_arm64.zip\")",
+      "Bash(unzip -q -o gh.zip)",
+      "Bash(./gh_2.96.0_macOS_arm64/bin/gh --version)",
+      "Bash(./gh_2.96.0_macOS_arm64/bin/gh auth *)",
+      "Bash(chmod +x push.sh)",
+      "Bash(./push.sh \"Thêm script auto push\")"
+    ]
+  }
+}
