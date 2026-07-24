@@ -14,7 +14,8 @@
       "Bash(chmod +x push.sh)",
       "Bash(./push.sh \"Thêm script auto push\")",
       "WebFetch(domain:kientruckienphong.vn)",
-      "Bash(./push.sh \"Thêm trang chọn nhà thầu + hồ sơ Kiến Phong \\(crawl từ kientruckienphong.vn\\)\")"
+      "Bash(./push.sh \"Thêm trang chọn nhà thầu + hồ sơ Kiến Phong \\(crawl từ kientruckienphong.vn\\)\")",
+      "Bash(./push.sh \"Đổi thẻ danh bạ Dezon -> Vietcons cho khớp trang hồ sơ\")"
     ]
   }
 }
