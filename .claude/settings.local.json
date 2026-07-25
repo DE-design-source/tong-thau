@@ -21,7 +21,10 @@
       "Bash(curl -s https://de-design-source.github.io/tong-thau/assets/js/templates.js?cb=__TRACKED_VAR__)",
       "WebFetch(domain:kientrucvietquang.net)",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('data/contractors.json'\\)\\);print\\('JSON OK, contractors:',[c['id'] for c in d['contractors']]\\)\")",
-      "Bash(./push.sh \"Them nha thau Viet Quang Group \\(crawl kientrucvietquang.net\\) + fix nhan template\")"
+      "Bash(./push.sh \"Them nha thau Viet Quang Group \\(crawl kientrucvietquang.net\\) + fix nhan template\")",
+      "Bash(python3 -)",
+      "Bash(node --check /tmp/admin_check.js)",
+      "Bash(./push.sh \"Admin: nut bat/tat Hien-An nhanh trong danh sach nha thau\")"
     ]
   }
 }

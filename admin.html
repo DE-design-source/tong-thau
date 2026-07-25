@@ -49,7 +49,12 @@
   .citem .av img{width:100%;height:100%;object-fit:contain;background:#fff}
   .citem .nm{font-weight:700;font-size:13.5px}
   .citem .tg{font-size:11.5px;color:var(--muted)}
-  .citem .unpub{margin-left:auto;font-size:10px;color:#b0764a;background:#fbeede;padding:2px 7px;border-radius:100px}
+  .citem .ci-main{min-width:0;flex:1}
+  .toggle-pub{margin-left:auto;flex-shrink:0;border:1px solid var(--line);background:#fff;font-size:11px;font-weight:700;padding:4px 11px;border-radius:100px;color:#a06a3a;transition:.15s}
+  .toggle-pub::before{content:'○ '}
+  .toggle-pub.on{background:#E7F4EA;border-color:#bfe3c8;color:#1e7d3a}
+  .toggle-pub.on::before{content:'● '}
+  .toggle-pub:hover{filter:brightness(.97)}
   .main{padding:clamp(16px,3vw,28px)}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
@@ -300,15 +305,31 @@
   function renderList(){
     $("clist").innerHTML = list.map(function(c){
       var av = c.logo ? '<img src="'+esc(c.logo)+'" alt="">' : esc(initials(c.name));
+      var pub = c.published!==false;
       return '<div class="citem'+(current&&current.id===c.id?" active":"")+'" data-id="'+esc(c.id)+'">'+
-        '<div class="av">'+av+'</div><div><div class="nm">'+esc(c.name)+'</div><div class="tg">'+esc(c.tagline||"")+'</div></div>'+
-        (c.published===false?'<span class="unpub">ẩn</span>':"")+'</div>';
+        '<div class="av">'+av+'</div>'+
+        '<div class="ci-main"><div class="nm">'+esc(c.name)+'</div><div class="tg">'+esc(c.tagline||"")+'</div></div>'+
+        '<button class="toggle-pub'+(pub?' on':'')+'" data-toggle="'+esc(c.id)+'" title="Bật/tắt hiển thị trên website">'+(pub?'Hiện':'Ẩn')+'</button>'+
+        '</div>';
     }).join("") || '<div style="color:var(--muted);font-size:13px;padding:8px">Chưa có nhà thầu nào.</div>';
+    Array.prototype.forEach.call($("clist").querySelectorAll(".toggle-pub"), function(btn){
+      btn.addEventListener("click", function(e){ e.stopPropagation(); togglePub(btn.getAttribute("data-toggle")); });
+    });
     Array.prototype.forEach.call($("clist").children, function(el){
       if(!el.getAttribute) return;
       var id=el.getAttribute("data-id"); if(!id) return;
       el.addEventListener("click", function(){ var c=list.filter(function(x){return x.id===id;})[0]; if(c) fillForm(JSON.parse(JSON.stringify(c))); renderList(); });
     });
+  }
+
+  async function togglePub(id){
+    var c=list.filter(function(x){return x.id===id;})[0]; if(!c) return;
+    c.published = (c.published===false);            // đảo trạng thái ẩn/hiện
+    try{
+      await DB.save(c); await refresh();
+      if(current && current.id===id){ current.published=c.published; $("f_published").checked=c.published!==false; }
+      msg(c.published ? ("Đã hiện: "+c.name) : ("Đã ẩn: "+c.name));
+    }catch(e){ msg("Lỗi: "+(e.message||e), true); }
   }
 
   async function refresh(){ list = await DB.list(); renderList(); }
