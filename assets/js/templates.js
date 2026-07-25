@@ -657,7 +657,7 @@
      T9 — SERIF ELEGANCE  (Playfair · trung tính ấm · nhã)
   ========================================================= */
   T.t9 = {
-    name: "Serif Elegance", desc: "Playfair · Trung tính ấm — thanh lịch",
+    name: "Serif Elegance", desc: "Trung tính ấm · thanh lịch, tinh tế",
     fonts: ["Montserrat:wght@400;500;600;700;800;900"],
     css: "\
 .tpl.t9{--bg:#F5F1EA;--pane:#fff;--tx:#2A2622;--mut:#7a7267;--acc:#9C6B3F;--line:#e4ddd0;font-family:'Montserrat',sans-serif;color:var(--tx);background:var(--bg)}\

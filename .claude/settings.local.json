@@ -17,7 +17,11 @@
       "Bash(./push.sh \"Thêm trang chọn nhà thầu + hồ sơ Kiến Phong \\(crawl từ kientruckienphong.vn\\)\")",
       "Bash(./push.sh \"Đổi thẻ danh bạ Dezon -> Vietcons cho khớp trang hồ sơ\")",
       "Bash(./push.sh \"He thong admin + 10 template + backend Firebase/demo, index/profile data-driven\")",
-      "Bash(./push.sh \"Ket noi Firebase config \\(de-design-102ad\\)\")"
+      "Bash(./push.sh \"Ket noi Firebase config \\(de-design-102ad\\)\")",
+      "Bash(curl -s https://de-design-source.github.io/tong-thau/assets/js/templates.js?cb=__TRACKED_VAR__)",
+      "WebFetch(domain:kientrucvietquang.net)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('data/contractors.json'\\)\\);print\\('JSON OK, contractors:',[c['id'] for c in d['contractors']]\\)\")",
+      "Bash(./push.sh \"Them nha thau Viet Quang Group \\(crawl kientrucvietquang.net\\) + fix nhan template\")"
     ]
   }
 }

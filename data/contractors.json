@@ -129,6 +129,76 @@
         "facebook": "https://facebook.com/KIENPHONGVN",
         "website": ""
       }
+    },
+    {
+      "id": "viet-quang",
+      "name": "Việt Quang Group",
+      "tagline": "Thương hiệu của sự an tâm",
+      "badge": "Thiết kế & xây dựng nhà trọn gói",
+      "verified": true,
+      "template": "t5",
+      "published": true,
+      "logo": "contractors/viet-quang/img/logo.png",
+      "logoInvertOnLight": false,
+      "cover": "contractors/viet-quang/img/p1-tan-co-dien.jpg",
+      "hero": "contractors/viet-quang/img/hero-villa.jpg",
+      "tags": ["Nhà phố", "Biệt thự", "Xây trọn gói", "Nội thất"],
+      "category": "Tổng thầu Nhà phố Biệt thự Nội thất",
+      "about": [
+        "Việt Quang Group là công ty thiết kế và xây dựng nhà đẹp chuyên nghiệp tại TP.HCM và các tỉnh lân cận, hoạt động qua hệ thống 7 chi nhánh với phương châm \"Có Tâm – Có Tầm – Có Đạo Đức\".",
+        "Chúng tôi cung cấp trọn gói từ thiết kế kiến trúc, thi công phần thô đến hoàn thiện nội thất — xây trọn gói 5.05–6.95 triệu/m², phần thô 3.5–3.9 triệu/m², miễn phí thiết kế khi ký hợp đồng xây dựng."
+      ],
+      "stats": [
+        {"value": "7", "label": "Chi nhánh TP.HCM"},
+        {"value": "1000+", "label": "Mẫu thiết kế"},
+        {"value": "18+", "label": "Năm kinh nghiệm"},
+        {"value": "100%", "label": "Đúng tiến độ"}
+      ],
+      "services": [
+        {"title": "Thiết kế biệt thự", "desc": "Thiết kế biệt thự sang trọng, tối ưu công năng và phong thủy."},
+        {"title": "Thiết kế nhà phố", "desc": "Thiết kế nhà phố hiện đại, tân cổ điển, tối ưu diện tích đô thị."},
+        {"title": "Thiết kế nội thất", "desc": "Giải pháp nội thất hoàn thiện đồng bộ, tinh tế."},
+        {"title": "Xây nhà trọn gói", "desc": "Xây dựng trọn gói chìa khóa trao tay, 5.05–6.95 triệu/m²."},
+        {"title": "Xây phần thô", "desc": "Thi công phần thô vững chắc, đúng kỹ thuật, 3.5–3.9 triệu/m²."},
+        {"title": "Sửa nhà & nâng tầng", "desc": "Sửa nhà trọn gói, cải tạo và nâng tầng an toàn."}
+      ],
+      "why": [
+        {"title": "Miễn phí thiết kế", "desc": "Tặng phí thiết kế kiến trúc khi ký hợp đồng thi công xây dựng."},
+        {"title": "Đúng tiến độ", "desc": "Cam kết bàn giao đúng tiến độ đã ký trong hợp đồng."},
+        {"title": "Bảo hành dài hạn", "desc": "Chế độ bảo hành công trình và bảo trì sau bàn giao."},
+        {"title": "Giám sát chuyên nghiệp", "desc": "Đội ngũ giám sát bám sát công trình, kiểm tra từng giai đoạn."},
+        {"title": "Đội ngũ kinh nghiệm", "desc": "Quản lý và đội thợ lành nghề, tận tâm với từng công trình."},
+        {"title": "7 chi nhánh", "desc": "Mạng lưới 7 chi nhánh phủ khắp TP.HCM, hỗ trợ nhanh chóng."}
+      ],
+      "process": [
+        {"title": "Tư vấn & thiết kế", "desc": "Khảo sát nhu cầu, tư vấn phương án và lên bản vẽ thiết kế."},
+        {"title": "Ký hợp đồng & dự toán", "desc": "Bóc tách khối lượng, báo giá minh bạch và ký hợp đồng."},
+        {"title": "Thi công & giám sát", "desc": "Thi công đúng thiết kế, giám sát chất lượng từng giai đoạn."},
+        {"title": "Nghiệm thu & bảo hành", "desc": "Nghiệm thu, bàn giao và bảo hành, bảo trì dài hạn."}
+      ],
+      "projects": [
+        {"title": "Nhà phố tân cổ điển", "meta": "TP.HCM · Tân cổ điển", "badge": "Hoàn thành", "image": "contractors/viet-quang/img/p1-tan-co-dien.jpg"},
+        {"title": "Nhà phố 4 tầng", "meta": "Quận 12 · 4 tầng", "badge": "Bàn giao", "image": "contractors/viet-quang/img/p2-4tang-q12.jpg"},
+        {"title": "Nhà phố 3 tầng 3x12m", "meta": "Quận 1 · 3 tầng", "badge": "Bàn giao", "image": "contractors/viet-quang/img/p3-3tang-q1.jpg"},
+        {"title": "Nhà phố liên kế", "meta": "Hóc Môn · 3 tầng", "badge": "Bàn giao", "image": "contractors/viet-quang/img/p4-lienke-hocmon.jpg"},
+        {"title": "Nhà phố 1 trệt 1 lầu", "meta": "TP.HCM · 1 trệt 1 lầu", "badge": "Bàn giao", "image": "contractors/viet-quang/img/p5-1tret1lau.jpg"}
+      ],
+      "styles": [
+        {"name": "Hiện đại", "desc": "Đường nét tối giản, tối ưu công năng và ánh sáng tự nhiên."},
+        {"name": "Tân cổ điển", "desc": "Sang trọng, cân đối với chi tiết phào chỉ tinh tế."},
+        {"name": "Cổ điển", "desc": "Bề thế, đẳng cấp cho biệt thự và dinh thự."}
+      ],
+      "contact": {
+        "phone": "0961.993.915",
+        "phone2": "0903.272.399",
+        "email": "kientrucvietquang2006@gmail.com",
+        "offices": [
+          {"label": "Trụ sở chính", "address": "Phường An Hội Đông, TP.HCM"},
+          {"label": "Hệ thống chi nhánh", "address": "Tân Bình · Thủ Đức · Tân Hưng · An Lạc · Diên Hồng · Bình Mỹ (Củ Chi)"}
+        ],
+        "facebook": "",
+        "website": "https://kientrucvietquang.net"
+      }
     }
   ]
 }
