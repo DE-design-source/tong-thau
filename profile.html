@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hồ sơ nhà thầu</title>
+<style>
+  html,body{margin:0}
+  #loading{min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;color:#888;font-size:15px}
+  #notfound{min-height:100vh;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;font-family:system-ui,sans-serif;color:#333;text-align:center;padding:24px}
+  #notfound a{color:#B85C2E;font-weight:600}
+</style>
+</head>
+<body>
+<div id="loading">Đang tải hồ sơ…</div>
+<div id="notfound">
+  <div style="font-size:22px;font-weight:700">Không tìm thấy nhà thầu</div>
+  <div style="color:#888">Hồ sơ này không tồn tại hoặc chưa được xuất bản.</div>
+  <a href="index.html">← Về trang chọn nhà thầu</a>
+</div>
+<div id="app"></div>
+
+<script src="firebase-config.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/templates.js"></script>
+<script>
+(function(){
+  function qs(k){ return new URLSearchParams(location.search).get(k); }
+  function loadFonts(fonts){
+    if(!fonts || !fonts.length) return;
+    var url = "https://fonts.googleapis.com/css2?" + fonts.map(function(f){return "family="+f;}).join("&") + "&display=swap";
+    var l = document.createElement("link"); l.rel="stylesheet"; l.href=url; document.head.appendChild(l);
+  }
+  function show(id){ ["loading","notfound","app"].forEach(function(x){ var e=document.getElementById(x); if(e) e.style.display = (x===id ? (x==="notfound"?"flex":"block") : "none"); }); }
+
+  var id = qs("id");
+  if(!id){ show("notfound"); return; }
+
+  DB.get(id).then(function(c){
+    if(!c || c.published===false){ show("notfound"); return; }
+    var out = window.renderTemplate(c.template || "t1", c);
+    loadFonts(out.fonts);
+    var style = document.createElement("style"); style.textContent = out.css; document.head.appendChild(style);
+    var app = document.getElementById("app");
+    app.className = "tpl " + out.root;
+    app.setAttribute("data-loginv", c.logoInvertOnLight ? "1" : "0");
+    app.innerHTML = out.html;
+    document.title = c.name + " — Hồ sơ nhà thầu";
+    show("app");
+    // cuộn tới mục nếu có hash (#du-an ...)
+    if(location.hash){ var t=document.querySelector(location.hash); if(t) t.scrollIntoView(); }
+  }).catch(function(e){ console.error(e); show("notfound"); });
+})();
+</script>
+</body>
+</html>

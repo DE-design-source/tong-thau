@@ -9,32 +9,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#18160F; --cream:#FAF8F3; --card:#FEFDFB; --navy:#0F1E2E;
-    --muted:#68644F; --line:#E7E2D5; --accent:oklch(52% 0.14 45); --accent-lt:oklch(70% 0.14 45);
-  }
+  :root{--ink:#18160F;--cream:#FAF8F3;--card:#FEFDFB;--navy:#0F1E2E;--muted:#68644F;--line:#E7E2D5;--accent:#B85C2E;--accent-lt:#CF7C4B}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
-
-  /* Header */
   header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);background:#FAF8F3EB}
   .hbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em}
   .brand .mk{width:30px;height:30px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800}
+  .htools{display:flex;align-items:center;gap:14px}
+  .admin-link{font-size:13px;color:var(--muted)}
   .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--cream);padding:9px 18px;border-radius:100px;font-size:13px;font-weight:700}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-lt)}
-
-  /* Hero */
   .hero{padding:clamp(48px,8vw,88px) 0 clamp(32px,5vw,52px)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--accent);background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:100px;margin-bottom:22px}
   h1{font-size:clamp(34px,5.2vw,58px);font-weight:800;letter-spacing:-.025em;line-height:1.06;margin:0 0 20px;max-width:820px}
   h1 em{font-style:normal;color:var(--accent)}
   .sub{font-size:clamp(16px,1.7vw,19px);line-height:1.6;color:var(--muted);max-width:600px;margin:0}
-
-  /* Toolbar */
   .toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:8px 0 26px}
   .search{flex:1;min-width:240px;max-width:420px;position:relative}
   .search input{width:100%;padding:13px 16px 13px 42px;border:1px solid var(--line);border-radius:100px;font-family:inherit;font-size:14px;background:#fff}
@@ -43,8 +36,6 @@
   .chip{padding:9px 16px;border-radius:100px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:.15s}
   .chip:hover{border-color:var(--accent)}
   .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-
-  /* Grid */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;padding-bottom:80px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.2s;position:relative}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(24,22,15,.35);border-color:#d8d1bd}
@@ -57,9 +48,10 @@
   .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
   .clogo{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
   .clogo img{max-width:80%;max-height:80%;object-fit:contain}
+  .clogo .mono{font-weight:800;color:#fff;font-size:15px;letter-spacing:.02em}
   .cname{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0}
   .ctag{font-size:12.5px;color:var(--muted);margin:2px 0 0}
-  .cdesc{font-size:14px;line-height:1.6;color:var(--muted);margin:2px 0 16px;flex:1}
+  .cdesc{font-size:14px;line-height:1.6;color:var(--muted);margin:12px 0 16px;flex:1}
   .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
   .tag{font-size:11.5px;font-weight:600;color:#7a7460;background:var(--cream);border:1px solid var(--line);padding:4px 10px;border-radius:7px}
   .stats{display:flex;gap:20px;padding:14px 0;border-top:1px solid var(--line);margin-bottom:16px}
@@ -67,14 +59,13 @@
   .stats .l{font-size:11px;color:var(--muted);margin-top:3px}
   .cbtn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:100px;background:var(--ink);color:#fff;font-size:14px;font-weight:700;transition:.15s}
   .card:hover .cbtn{background:var(--accent)}
-
-  /* Soon card */
   .soon{border-style:dashed;background:transparent;align-items:center;justify-content:center;text-align:center;padding:44px 24px;color:var(--muted);min-height:340px;display:flex;flex-direction:column;gap:10px}
   .soon .plus{width:52px;height:52px;border-radius:14px;border:1.5px dashed #cfc8b4;display:flex;align-items:center;justify-content:center;font-size:26px;color:#b6ae98}
-
   footer{background:var(--navy);color:rgba(255,255,255,.6);padding:34px 0;font-size:13px}
   .fbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .fbar a{color:rgba(255,255,255,.8)}
   .hidden{display:none!important}
+  .demo-note{background:#FFF3E6;border:1px solid #F0D8B8;color:#8a5a1a;font-size:12.5px;padding:8px 14px;border-radius:10px;margin:0 0 20px;display:none}
 </style>
 </head>
 <body>
@@ -82,7 +73,10 @@
 <header>
   <div class="wrap hbar">
     <a href="index.html" class="brand"><span class="mk">N</span> Nhà Thầu<span style="color:var(--accent)">.</span></a>
-    <a href="#danh-sach" class="pill"><span class="dot"></span> Xem nhà thầu</a>
+    <div class="htools">
+      <a href="admin.html" class="admin-link">Quản trị</a>
+      <a href="#danh-sach" class="pill"><span class="dot"></span> Xem nhà thầu</a>
+    </div>
   </div>
 </header>
 
@@ -95,6 +89,7 @@
 </section>
 
 <div class="wrap" id="danh-sach">
+  <div class="demo-note" id="demoNote">⚠️ Đang chạy chế độ DEMO (dữ liệu lưu trên trình duyệt). Cấu hình Firebase để dùng backend thật.</div>
   <div class="toolbar">
     <div class="search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
@@ -107,99 +102,65 @@
       <button class="chip" data-f="Biệt thự" onclick="setFilter(this)">Biệt thự</button>
     </div>
   </div>
-
-  <div class="grid" id="grid">
-
-    <!-- DEZON -->
-    <a class="card" href="Dezon.dc.html" data-name="dezon vietcons tổng thầu xây dựng nhà phố biệt thự" data-cat="Tổng thầu Biệt thự">
-      <div class="cover">
-        <img src="bao-gia-thiet-ke-nha-nha-trang-xanh-desi-mrp5ab71-9iu3.jpg" alt="Dezon">
-        <span class="badge">Tổng thầu xây dựng</span>
-        <span class="verified">✓ Đã xác minh</span>
-      </div>
-      <div class="body">
-        <div class="logo-row">
-          <div class="clogo" style="background:var(--ink)"><span style="font-weight:800;color:#fff;font-size:14px;letter-spacing:.03em">VC</span></div>
-          <div><h3 class="cname">Vietcons</h3><p class="ctag">Tổng thầu xây dựng trọn gói</p></div>
-        </div>
-        <p class="cdesc">Đồng hành cùng gia chủ toàn bộ hành trình xây nhà — thiết kế, xin phép, thi công, hoàn thiện — một đầu mối, một hợp đồng, không phát sinh.</p>
-        <div class="tags"><span class="tag">Nhà phố</span><span class="tag">Biệt thự</span><span class="tag">Trọn gói</span><span class="tag">Toàn quốc</span></div>
-        <div class="stats">
-          <div><div class="n">15+</div><div class="l">Năm kinh nghiệm</div></div>
-          <div><div class="n">1000+</div><div class="l">Công trình</div></div>
-          <div><div class="n">100%</div><div class="l">Minh bạch</div></div>
-        </div>
-        <span class="cbtn">Xem hồ sơ năng lực →</span>
-      </div>
-    </a>
-
-    <!-- KIEN PHONG -->
-    <a class="card" href="kien-phong.html" data-name="kiến phong kien phong nội thất biệt thự indochine design build" data-cat="Nội thất Biệt thự">
-      <div class="cover">
-        <img src="contractors/kien-phong/img/black-on-white.jpg" alt="Kiến Phong">
-        <span class="badge">Thiết kế &amp; thi công nội thất</span>
-        <span class="verified">✓ Đã xác minh</span>
-      </div>
-      <div class="body">
-        <div class="logo-row">
-          <div class="clogo"><img src="contractors/kien-phong/img/logo.png" alt="Kiến Phong logo" style="filter:brightness(0)"></div>
-          <div><h3 class="cname">Kiến Phong</h3><p class="ctag">Kiến trúc &amp; nội thất Design &amp; Build</p></div>
-        </div>
-        <p class="cdesc">Đơn vị thi công nội thất hàng đầu theo mô hình Design &amp; Build — thiết kế và thi công trọn gói cho căn hộ, biệt thự, nhà phố.</p>
-        <div class="tags"><span class="tag">Nội thất</span><span class="tag">Indochine</span><span class="tag">Hiện đại</span><span class="tag">Penthouse</span></div>
-        <div class="stats">
-          <div><div class="n">−25%</div><div class="l">Thời gian</div></div>
-          <div><div class="n">10–15%</div><div class="l">Tiết kiệm CP</div></div>
-          <div><div class="n">2</div><div class="l">VP HN &amp; HCM</div></div>
-        </div>
-        <span class="cbtn">Xem hồ sơ năng lực →</span>
-      </div>
-    </a>
-
-    <!-- COMING SOON -->
-    <div class="card soon" data-name="" data-cat="soon">
-      <div class="plus">+</div>
-      <div style="font-weight:700;color:var(--ink)">Nhà thầu tiếp theo</div>
-      <div style="font-size:13.5px;max-width:220px">Danh bạ đang được mở rộng. Các nhà thầu mới sẽ sớm xuất hiện tại đây.</div>
-    </div>
-
-  </div>
+  <div class="grid" id="grid"></div>
   <div id="empty" class="hidden" style="text-align:center;color:var(--muted);padding:40px 0 80px">Không tìm thấy nhà thầu phù hợp.</div>
 </div>
 
 <footer><div class="wrap fbar">
   <div>© 2026 Danh bạ Nhà Thầu — Hồ sơ năng lực nhà thầu xây dựng &amp; nội thất</div>
-  <div style="display:flex;gap:18px"><a href="Dezon.dc.html">Vietcons</a><a href="kien-phong.html">Kiến Phong</a></div>
+  <div style="display:flex;gap:18px"><a href="admin.html">Quản trị</a></div>
 </div></footer>
 
+<script src="firebase-config.js"></script>
+<script src="assets/js/db.js"></script>
 <script>
-  var curFilter = 'all';
+  var curFilter = "all";
+  function esc(s){ return (s==null?"":String(s)).replace(/[&<>"']/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m];}); }
+  function initials(n){ return (n||"?").trim().split(/\s+/).slice(0,2).map(function(w){return w[0];}).join("").toUpperCase(); }
+
+  function card(c){
+    var cover = c.cover ? '<img src="'+esc(c.cover)+'" alt="'+esc(c.name)+'">' : "";
+    var logo = c.logo
+      ? '<img src="'+esc(c.logo)+'" alt="'+esc(c.name)+'" style="'+(c.logoInvertOnLight?"filter:brightness(0)":"")+'">'
+      : '<span class="mono">'+esc(initials(c.name))+'</span>';
+    var logoBox = c.logo ? '<div class="clogo">'+logo+'</div>' : '<div class="clogo" style="background:var(--ink)">'+logo+'</div>';
+    var tags = (c.tags||[]).slice(0,4).map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join("");
+    var stats = (c.stats||[]).slice(0,3).map(function(s){return '<div><div class="n">'+esc(s.value)+'</div><div class="l">'+esc(s.label)+'</div></div>';}).join("");
+    var desc = (c.about&&c.about[0]) ? c.about[0] : (c.tagline||"");
+    var href = c.link ? esc(c.link) : ("profile.html?id="+encodeURIComponent(c.id));
+    return '<a class="card" href="'+href+'" data-name="'+esc((c.name+" "+(c.tags||[]).join(" ")+" "+(c.tagline||"")).toLowerCase())+'" data-cat="'+esc(c.category||"")+'">'+
+      '<div class="cover">'+cover+
+      (c.badge?'<span class="badge">'+esc(c.badge)+'</span>':"")+
+      (c.verified?'<span class="verified">✓ Đã xác minh</span>':"")+'</div>'+
+      '<div class="body"><div class="logo-row">'+logoBox+
+      '<div><h3 class="cname">'+esc(c.name)+'</h3><p class="ctag">'+esc(c.tagline||"")+'</p></div></div>'+
+      '<p class="cdesc">'+esc(desc)+'</p>'+
+      (tags?'<div class="tags">'+tags+'</div>':"")+
+      (stats?'<div class="stats">'+stats+'</div>':"")+
+      '<span class="cbtn">Xem hồ sơ năng lực →</span></div></a>';
+  }
+  var soonCard = '<div class="card soon" data-name="" data-cat="soon"><div class="plus">+</div><div style="font-weight:700;color:var(--ink)">Nhà thầu tiếp theo</div><div style="font-size:13.5px;max-width:220px">Danh bạ đang được mở rộng. Các nhà thầu mới sẽ sớm xuất hiện tại đây.</div></div>';
+
   function setFilter(btn){
-    document.querySelectorAll('#filters .chip').forEach(function(c){c.classList.remove('active')});
-    btn.classList.add('active');
-    curFilter = btn.getAttribute('data-f');
-    filterCards();
+    document.querySelectorAll("#filters .chip").forEach(function(c){c.classList.remove("active");});
+    btn.classList.add("active"); curFilter = btn.getAttribute("data-f"); filterCards();
   }
   function filterCards(){
-    var q = (document.getElementById('q').value || '').toLowerCase().trim();
-    var cards = document.querySelectorAll('#grid .card');
-    var shown = 0;
+    var q = (document.getElementById("q").value||"").toLowerCase().trim();
+    var cards = document.querySelectorAll("#grid .card"); var shown=0;
     cards.forEach(function(card){
-      if(card.classList.contains('soon')){
-        // hide the placeholder while actively searching/filtering
-        card.classList.toggle('hidden', !!q || curFilter!=='all');
-        return;
-      }
-      var name = (card.getAttribute('data-name')||'').toLowerCase();
-      var cat = (card.getAttribute('data-cat')||'');
-      var okText = !q || name.indexOf(q)>-1;
-      var okCat = curFilter==='all' || cat.indexOf(curFilter)>-1;
-      var vis = okText && okCat;
-      card.classList.toggle('hidden', !vis);
-      if(vis) shown++;
+      if(card.classList.contains("soon")){ card.classList.toggle("hidden", !!q||curFilter!=="all"); return; }
+      var name=(card.getAttribute("data-name")||""); var cat=(card.getAttribute("data-cat")||"");
+      var ok = (!q||name.indexOf(q)>-1) && (curFilter==="all"||cat.indexOf(curFilter)>-1);
+      card.classList.toggle("hidden", !ok); if(ok) shown++;
     });
-    document.getElementById('empty').classList.toggle('hidden', shown>0);
+    document.getElementById("empty").classList.toggle("hidden", shown>0);
   }
+
+  if(DB.mode==="demo"){ document.getElementById("demoNote").style.display="block"; }
+  DB.list({publishedOnly:true}).then(function(list){
+    document.getElementById("grid").innerHTML = list.map(card).join("") + soonCard;
+  }).catch(function(e){ console.error(e); document.getElementById("grid").innerHTML = soonCard; });
 </script>
 </body>
 </html>

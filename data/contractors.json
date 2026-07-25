@@ -1,0 +1,134 @@
+{
+  "contractors": [
+    {
+      "id": "vietcons",
+      "name": "Vietcons",
+      "tagline": "Tổng thầu xây dựng trọn gói",
+      "badge": "Tổng thầu xây dựng",
+      "verified": true,
+      "template": "t1",
+      "published": true,
+      "logo": "assets/dezon-logo.svg",
+      "logoInvertOnLight": false,
+      "cover": "bao-gia-thiet-ke-nha-nha-trang-xanh-desi-mrp5ab71-9iu3.jpg",
+      "hero": "bao-gia-thiet-ke-nha-nha-trang-xanh-desi-mrp5ab71-9iu3.jpg",
+      "tags": ["Nhà phố", "Biệt thự", "Trọn gói", "Toàn quốc"],
+      "category": "Tổng thầu Biệt thự",
+      "about": [
+        "Vietcons hoạt động trong lĩnh vực xây dựng dân dụng hơn 15 năm, đầu tư máy móc thiết bị, quy trình quản lý thi công bài bản, tài chính minh bạch và đội ngũ kỹ sư giàu kinh nghiệm — là đối tác đáng tin cậy của hàng nghìn gia đình Việt Nam.",
+        "Chúng tôi không ngừng đầu tư vào con người và công nghệ để mang đến những công trình chất lượng, thẩm mỹ và bền vững, đồng thời giữ vững cam kết minh bạch trong từng hạng mục."
+      ],
+      "stats": [
+        {"value": "15+", "label": "Năm kinh nghiệm"},
+        {"value": "1000+", "label": "Công trình"},
+        {"value": "100%", "label": "Minh bạch"},
+        {"value": "63", "label": "Tỉnh thành"}
+      ],
+      "services": [
+        {"title": "Xây nhà trọn gói", "desc": "Tổng thầu trọn gói nhà phố, biệt thự, văn phòng, khách sạn — một đầu mối, một hợp đồng."},
+        {"title": "Thiết kế kiến trúc", "desc": "Thiết kế biệt thự, dinh thự, penthouse, resort cao cấp bởi đội ngũ KTS nội bộ."},
+        {"title": "Thi công phần thô", "desc": "Thi công phần thô vững chắc, đúng kỹ thuật, giám sát chặt chẽ từng giai đoạn."},
+        {"title": "Hoàn thiện nội thất", "desc": "Hoàn thiện và nội thất tinh tế, bàn giao chìa khóa trao tay."},
+        {"title": "Nhà lắp ghép", "desc": "Xây dựng nhà lắp ghép: biệt thự, văn phòng, nhà hàng, khu nghỉ dưỡng."}
+      ],
+      "why": [
+        {"title": "Một đầu mối duy nhất", "desc": "Thiết kế và thi công cùng một đơn vị, trách nhiệm rõ ràng, không đùn đẩy."},
+        {"title": "Không phát sinh", "desc": "Hợp đồng minh bạch, dự toán chi tiết, cam kết không phát sinh chi phí."},
+        {"title": "Đội ngũ kinh nghiệm", "desc": "Kỹ sư, kiến trúc sư nội bộ, không qua thầu phụ trung gian."},
+        {"title": "Bảo hành dài hạn", "desc": "Chính sách bảo hành và bảo trì công trình dài hạn sau bàn giao."}
+      ],
+      "process": [
+        {"title": "Tiếp nhận & tư vấn", "desc": "Khảo sát nhu cầu, hiện trạng và tư vấn phương án phù hợp ngân sách."},
+        {"title": "Thiết kế & dự toán", "desc": "Lên bản vẽ, phối cảnh và dự toán chi tiết, minh bạch."},
+        {"title": "Thi công & giám sát", "desc": "Thi công đúng tiến độ, giám sát chất lượng chặt chẽ."},
+        {"title": "Bàn giao & bảo hành", "desc": "Nghiệm thu, bàn giao chìa khóa và bảo hành dài hạn."}
+      ],
+      "projects": [
+        {"title": "Biệt thự ven biển", "meta": "Nha Trang · 320m²", "badge": "Hoàn thành", "image": "assets/project-1.jpg"},
+        {"title": "Nhà phố hiện đại", "meta": "TP.HCM · 5 tầng", "badge": "Hoàn thành", "image": "assets/project-2.jpg"},
+        {"title": "Dinh thự sân vườn", "meta": "Đồng Nai · 450m²", "badge": "Đang thi công", "image": "assets/project-3.jpg"},
+        {"title": "Villa nghỉ dưỡng", "meta": "Đà Lạt · 280m²", "badge": "Hoàn thành", "image": "assets/project-4.jpg"}
+      ],
+      "styles": [],
+      "contact": {
+        "phone": "1900.123.456",
+        "phone2": "",
+        "email": "support@dezon.vn",
+        "offices": [
+          {"label": "Trụ sở chính", "address": "TP. Hồ Chí Minh, Việt Nam"}
+        ],
+        "facebook": "",
+        "website": ""
+      }
+    },
+    {
+      "id": "kien-phong",
+      "name": "Kiến Phong",
+      "tagline": "Kiến trúc & nội thất Design & Build",
+      "badge": "Thiết kế & thi công nội thất",
+      "verified": true,
+      "template": "t2",
+      "published": true,
+      "logo": "contractors/kien-phong/img/logo.png",
+      "logoInvertOnLight": true,
+      "cover": "contractors/kien-phong/img/black-on-white.jpg",
+      "hero": "contractors/kien-phong/img/solar-villa.jpg",
+      "tags": ["Nội thất", "Indochine", "Hiện đại", "Penthouse"],
+      "category": "Nội thất Biệt thự",
+      "about": [
+        "Kiến Phong là đơn vị thi công nội thất hàng đầu tại Việt Nam với đội ngũ chuyên gia giàu kinh nghiệm trong hoàn thiện công trình cao cấp. Chúng tôi cung cấp giải pháp thiết kế và thi công trọn gói (Design & Build) cho nội thất, biệt thự và nhà ở.",
+        "Với hệ thống quản lý chuyên nghiệp và cam kết chất lượng đồng nhất trên mọi dự án, Kiến Phong mang đến sự an tâm tuyệt đối cho gia chủ."
+      ],
+      "stats": [
+        {"value": "−25%", "label": "Thời gian thi công"},
+        {"value": "10–15%", "label": "Tiết kiệm chi phí"},
+        {"value": "D&B", "label": "Thiết kế & Thi công"},
+        {"value": "2", "label": "Văn phòng HN & HCM"}
+      ],
+      "services": [
+        {"title": "Thi công nội thất", "desc": "Hoàn thiện nội thất cao cấp cho căn hộ, nhà ở và biệt thự, đúng thiết kế và tiến độ."},
+        {"title": "Thi công biệt thự", "desc": "Xây dựng và hoàn thiện biệt thự cao cấp, kiểm soát chất lượng toàn diện."},
+        {"title": "Thi công nhà phố", "desc": "Giải pháp nhà phố tối ưu công năng, thẩm mỹ hiện đại, thi công trọn gói."},
+        {"title": "Thi công nhà vườn", "desc": "Không gian sống hòa hợp thiên nhiên, cân bằng kiến trúc và cảnh quan."},
+        {"title": "Căn hộ & Penthouse", "desc": "Thiết kế và thi công nội thất căn hộ, penthouse sang trọng và tinh tế."}
+      ],
+      "why": [
+        {"title": "Tiết kiệm thời gian", "desc": "Quy trình khép kín, thiết kế và thi công song song rút ngắn tiến độ tới 25%."},
+        {"title": "Tối ưu chi phí", "desc": "Một đầu mối phối hợp giúp tiết kiệm 10–15% chi phí, minh bạch từng hạng mục."},
+        {"title": "Kiểm soát thiết kế", "desc": "Đội ngũ nội bộ quản lý thiết kế và thi công đồng bộ, thống nhất ý tưởng."},
+        {"title": "Đảm bảo chất lượng", "desc": "Trách nhiệm thống nhất một đầu mối, cam kết chất lượng đồng nhất mọi dự án."},
+        {"title": "Thi công đúng thiết kế", "desc": "Công trình hoàn thiện đúng như bản vẽ 3D đã duyệt, không sai lệch."},
+        {"title": "Bảo hành & bảo trì", "desc": "Chính sách bảo hành dài hạn, đồng hành bảo trì sau bàn giao."}
+      ],
+      "process": [
+        {"title": "Khảo sát & tư vấn", "desc": "Tiếp nhận nhu cầu, khảo sát hiện trạng và tư vấn phương án phù hợp."},
+        {"title": "Thiết kế 3D", "desc": "Lên ý tưởng, dựng phối cảnh 3D và bóc tách khối lượng chi tiết."},
+        {"title": "Thi công", "desc": "Thi công đúng thiết kế, giám sát chất lượng và tiến độ minh bạch."},
+        {"title": "Bàn giao & bảo hành", "desc": "Nghiệm thu, bàn giao chìa khóa và bảo hành, bảo trì dài hạn."}
+      ],
+      "projects": [
+        {"title": "Solar Villa", "meta": "Hà Nội · 390m² · Biệt thự Indochine", "badge": "Indochine Pháp", "image": "contractors/kien-phong/img/solar-villa.jpg"},
+        {"title": "Black on White", "meta": "Vạn Phúc City · 650m² · Hiện đại", "badge": "Hiện đại", "image": "contractors/kien-phong/img/black-on-white.jpg"},
+        {"title": "France Indochine", "meta": "Quận 9, TP.HCM · 360m² · Indochine", "badge": "Indochine", "image": "contractors/kien-phong/img/france-indochine.jpg"},
+        {"title": "Classia Khang Điền", "meta": "TP.HCM · 300m² · Indochine hiện đại", "badge": "Indochine hiện đại", "image": "contractors/kien-phong/img/classia-khang-dien.jpg"},
+        {"title": "Modern House", "meta": "Bình Dương · 9m × 13m · Hiện đại", "badge": "Hiện đại", "image": "contractors/kien-phong/img/modern-house-bd.jpg"}
+      ],
+      "styles": [
+        {"name": "Đông Dương", "desc": "Giao thoa tinh tế giữa nét cổ điển Pháp và bản sắc Á Đông — hoài cổ, sang trọng và ấm áp."},
+        {"name": "Hiện đại", "desc": "Đường nét tối giản, không gian mở và vật liệu tinh gọn cho phong cách sống đương đại."},
+        {"name": "Địa Trung Hải", "desc": "Tông màu ấm, đường cong mềm mại và ánh sáng tự nhiên gợi không khí nghỉ dưỡng."}
+      ],
+      "contact": {
+        "phone": "0972.868.627",
+        "phone2": "0974.410.244",
+        "email": "kientruc.kienphonglegend@gmail.com",
+        "offices": [
+          {"label": "Văn phòng TP.HCM", "address": "30-32 Đinh Thị Thi, KĐT Vạn Phúc, TP. Thủ Đức, TP.HCM"},
+          {"label": "Văn phòng Hà Nội", "address": "18 Nguyễn Cơ Thạch, Cầu Diễn, Nam Từ Liêm, Hà Nội"}
+        ],
+        "facebook": "https://facebook.com/KIENPHONGVN",
+        "website": ""
+      }
+    }
+  ]
+}
