@@ -16,7 +16,8 @@
       "WebFetch(domain:kientruckienphong.vn)",
       "Bash(./push.sh \"Thêm trang chọn nhà thầu + hồ sơ Kiến Phong \\(crawl từ kientruckienphong.vn\\)\")",
       "Bash(./push.sh \"Đổi thẻ danh bạ Dezon -> Vietcons cho khớp trang hồ sơ\")",
-      "Bash(./push.sh \"He thong admin + 10 template + backend Firebase/demo, index/profile data-driven\")"
+      "Bash(./push.sh \"He thong admin + 10 template + backend Firebase/demo, index/profile data-driven\")",
+      "Bash(./push.sh \"Ket noi Firebase config \\(de-design-102ad\\)\")"
     ]
   }
 }
